@@ -6,6 +6,7 @@ require 'rspec/autorun'
 require 'capybara/rspec'
 require 'formulan/rspec'
 require 'database_cleaner'
+require 'shoulda-matchers'
 
 ENGINE_RAILS_ROOT = File.join(File.dirname(__FILE__), '../')
 

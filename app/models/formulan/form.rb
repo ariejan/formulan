@@ -1,5 +1,4 @@
 module Formulan
-
   # Hash containing defined forms
   def self.forms
     @forms ||= {}
@@ -18,5 +17,8 @@ module Formulan
   # Actual ActiveRecord class to store submitted
   # form data.
   class Form < ActiveRecord::Base
+    attr_accessible :data
+
+    serialize :data
   end
 end
