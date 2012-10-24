@@ -5,6 +5,10 @@ module Formulan
     @forms ||= {}
   end
 
+  def self.fetch(identifier)
+    @forms.fetch(identifier, nil)
+  end
+
   # Convenience method for Formulan::FormDefinition.new
   def self.define(identifier, &block)
     forms[identifier] = FormDefinition.new(identifier, &block)

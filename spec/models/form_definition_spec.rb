@@ -23,6 +23,18 @@ module Formulan
     end
   end
 
+  describe "#self.fetch" do
+    subject { Formulan.define :my_form }
+
+    it "fetches the proper form" do
+      expect(Formulan.fetch(:my_form).identifier).to eq(:my_form)
+    end
+
+    it "returns nil when the form is not known" do
+      expect(Formulan.fetch(:unknown)).to be_nil
+    end
+  end
+
   describe "field types" do
     describe "string" do
       let(:form) {
