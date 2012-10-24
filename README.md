@@ -1,4 +1,4 @@
-# Formulan
+# Formulan [![Build Status](https://secure.travis-ci.org/ariejan/formulan.png)](http://travis-ci.org/ariejan/formulan)
 
 Formulan allows you to easily add general purpose forms to your Rails application. You define the form and Formulan takes cares that submitted forms are stored serialized in your database.
 
