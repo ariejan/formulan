@@ -6,10 +6,6 @@ You need to collect information, but you are not particularly interested in it f
 
 Formulan is great for contact request forms, information requests or simple questionnaires.
 
-## Build status
-
-> TODO: Use the travis.
-
 ## Current development status
 
 Formulan is not yet feature complete, but stable enough to use in production.
