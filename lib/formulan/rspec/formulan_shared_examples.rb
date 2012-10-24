@@ -10,6 +10,21 @@ shared_examples_for "a formulan form", type: :integration do
     end
   end
 
+  describe "from app/forms" do
+    it "shows those forms" do
+      visit '/formulan/survey'
+      expect(page).to have_content("What's your name")
+    end
+  end
+
+  describe 'non-exsiting form' do
+    it "shows a not found error" do
+      visit '/formulan/does-not-compute'
+
+      expect(page).to have_content("does not exist")
+    end
+  end
+
   describe "filling out form" do
     it "redirects to thanks" do
       fill_contact_form
