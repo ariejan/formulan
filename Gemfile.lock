@@ -53,6 +53,10 @@ GEM
     diff-lcs (1.1.3)
     erubis (2.7.0)
     ffi (1.1.5)
+    fuubar (1.1.0)
+      rspec (~> 2.0)
+      rspec-instafail (~> 0.2.0)
+      ruby-progressbar (~> 1.0.0)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -102,12 +106,14 @@ GEM
     rspec-core (2.11.1)
     rspec-expectations (2.11.3)
       diff-lcs (~> 1.1.3)
+    rspec-instafail (0.2.4)
     rspec-mocks (2.11.2)
     rspec-rails (2.11.0)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec (~> 2.11.0)
+    ruby-progressbar (1.0.2)
     rubyzip (0.9.9)
     selenium-webdriver (2.25.0)
       childprocess (>= 0.2.5)
@@ -135,6 +141,7 @@ DEPENDENCIES
   capybara-webkit
   database_cleaner
   formulan!
+  fuubar
   jquery-rails
   rspec-rails
   sqlite3

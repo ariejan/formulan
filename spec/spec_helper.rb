@@ -4,6 +4,7 @@ require File.expand_path("../dummy/config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/rspec'
+require 'formulan/rspec'
 require 'database_cleaner'
 
 ENGINE_RAILS_ROOT = File.join(File.dirname(__FILE__), '../')
@@ -13,6 +14,10 @@ ENGINE_RAILS_ROOT = File.join(File.dirname(__FILE__), '../')
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    c.syntax = :expect
+  end
+
   config.mock_with :rspec
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your

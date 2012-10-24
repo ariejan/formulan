@@ -1,0 +1,106 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateFormulanFormulanForms (20121024083434)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "formulan_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "identifier" varchar(255), "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("formulan_forms")
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_formulan_forms_on_identifier" ON "formulan_forms" ("identifier")[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121024083434')
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("formulan_forms")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_formulan_forms_on_identifier')[0m
+Connecting to database specified by database.yml
+  [1m[36m (8.5ms)[0m  [1mDELETE FROM "formulan_forms";[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'formulan_forms';
+  [1m[36m (2.2ms)[0m  [1mDELETE FROM "formulan_forms";[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'formulan_forms';
+  [1m[36m (1.6ms)[0m  [1mDELETE FROM "formulan_forms";[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'formulan_forms';
+Connecting to database specified by database.yml
+  [1m[36m (2.3ms)[0m  [1mDELETE FROM "formulan_forms";[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'formulan_forms';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (46.9ms)[0m  INSERT INTO "formulan_forms" ("created_at", "data", "identifier", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 24 Oct 2012 08:42:08 UTC +00:00], ["data", nil], ["identifier", :my_form], ["updated_at", Wed, 24 Oct 2012 08:42:08 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.6ms)[0m  DELETE FROM "formulan_forms";
+  [1m[36m (1.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'formulan_forms';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "formulan_forms" ("created_at", "data", "identifier", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 24 Oct 2012 08:42:08 UTC +00:00], ["data", nil], ["identifier", :my_form], ["updated_at", Wed, 24 Oct 2012 08:42:08 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (1.5ms)[0m  [1mDELETE FROM "formulan_forms";[0m
+  [1m[35m (1.2ms)[0m  DELETE FROM sqlite_sequence where name = 'formulan_forms';
+Connecting to database specified by database.yml
+  [1m[36m (2.9ms)[0m  [1mDELETE FROM "formulan_forms";[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'formulan_forms';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (35.2ms)[0m  INSERT INTO "formulan_forms" ("created_at", "data", "identifier", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 24 Oct 2012 08:44:05 UTC +00:00], ["data", nil], ["identifier", :my_form], ["updated_at", Wed, 24 Oct 2012 08:44:05 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (2.1ms)[0m  DELETE FROM "formulan_forms";
+  [1m[36m (1.3ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'formulan_forms';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "formulan_forms" ("created_at", "data", "identifier", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 24 Oct 2012 08:44:05 UTC +00:00], ["data", nil], ["identifier", :my_form], ["updated_at", Wed, 24 Oct 2012 08:44:05 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (2.0ms)[0m  [1mDELETE FROM "formulan_forms";[0m
+  [1m[35m (1.3ms)[0m  DELETE FROM sqlite_sequence where name = 'formulan_forms';
+Connecting to database specified by database.yml
+  [1m[36m (2.6ms)[0m  [1mDELETE FROM "formulan_forms";[0m
+  [1m[35m (19.9ms)[0m  DELETE FROM sqlite_sequence where name = 'formulan_forms';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (32.1ms)[0m  INSERT INTO "formulan_forms" ("created_at", "data", "identifier", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 24 Oct 2012 08:46:57 UTC +00:00], ["data", nil], ["identifier", :my_form], ["updated_at", Wed, 24 Oct 2012 08:46:57 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (2.1ms)[0m  DELETE FROM "formulan_forms";
+  [1m[36m (1.5ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'formulan_forms';[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.4ms)[0m  [1mDELETE FROM "formulan_forms";[0m
+  [1m[35m (20.1ms)[0m  DELETE FROM sqlite_sequence where name = 'formulan_forms';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (38.8ms)[0m  INSERT INTO "formulan_forms" ("created_at", "data", "identifier", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 24 Oct 2012 08:49:04 UTC +00:00], ["data", nil], ["identifier", :my_form], ["updated_at", Wed, 24 Oct 2012 08:49:04 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (2.0ms)[0m  DELETE FROM "formulan_forms";
+  [1m[36m (1.7ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'formulan_forms';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "formulan_forms" ("created_at", "data", "identifier", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 24 Oct 2012 08:49:04 UTC +00:00], ["data", nil], ["identifier", :my_form], ["updated_at", Wed, 24 Oct 2012 08:49:04 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (1.9ms)[0m  [1mDELETE FROM "formulan_forms";[0m
+  [1m[35m (1.2ms)[0m  DELETE FROM sqlite_sequence where name = 'formulan_forms';
+Connecting to database specified by database.yml
+  [1m[36m (86.1ms)[0m  [1mDELETE FROM "formulan_forms";[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'formulan_forms';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.8ms)[0m  INSERT INTO "formulan_forms" ("created_at", "data", "identifier", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 24 Oct 2012 08:49:21 UTC +00:00], ["data", nil], ["identifier", :my_form], ["updated_at", Wed, 24 Oct 2012 08:49:21 UTC +00:00]]
+  [1m[36m (59.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (2.3ms)[0m  DELETE FROM "formulan_forms";
+  [1m[36m (7.4ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'formulan_forms';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "formulan_forms" ("created_at", "data", "identifier", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 24 Oct 2012 08:49:21 UTC +00:00], ["data", nil], ["identifier", :my_form], ["updated_at", Wed, 24 Oct 2012 08:49:21 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (3.0ms)[0m  [1mDELETE FROM "formulan_forms";[0m
+  [1m[35m (1.7ms)[0m  DELETE FROM sqlite_sequence where name = 'formulan_forms';
+Connecting to database specified by database.yml
+  [1m[36m (2.0ms)[0m  [1mDELETE FROM "formulan_forms";[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'formulan_forms';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.7ms)[0m  INSERT INTO "formulan_forms" ("created_at", "data", "identifier", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 24 Oct 2012 08:49:47 UTC +00:00], ["data", nil], ["identifier", :my_form], ["updated_at", Wed, 24 Oct 2012 08:49:47 UTC +00:00]]
+  [1m[36m (13.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (2.0ms)[0m  DELETE FROM "formulan_forms";
+  [1m[36m (1.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'formulan_forms';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "formulan_forms" ("created_at", "data", "identifier", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 24 Oct 2012 08:49:48 UTC +00:00], ["data", nil], ["identifier", :my_form], ["updated_at", Wed, 24 Oct 2012 08:49:48 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (1.5ms)[0m  [1mDELETE FROM "formulan_forms";[0m
+  [1m[35m (1.3ms)[0m  DELETE FROM sqlite_sequence where name = 'formulan_forms';

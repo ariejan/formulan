@@ -16,13 +16,17 @@ Gem::Specification.new do |s|
     "No more hassle with contact forms or survey. Formulan stores
      submitted data serialized in your database for later processing."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + 
-    ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.require_paths = %w(lib app)
 
   s.add_dependency "rails", "~> 3.2.8"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "fuubar"
+  s.add_development_dependency "sqlite3"
   s.add_development_dependency "capybara-webkit"
   s.add_development_dependency "database_cleaner"
 end
