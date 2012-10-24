@@ -1,15 +1,17 @@
 module Formulan
+
+  # Hash containing defined forms
+  def self.forms
+    @forms ||= {}
+  end
+
+  # Convenience method for Formulan::FormDefinition.new
+  def self.define(identifier, &block)
+    forms[identifier] = FormDefinition.new(identifier, &block)
+  end
+
+  # Actual ActiveRecord class to store submitted
+  # form data.
   class Form < ActiveRecord::Base
-
-    attr_accessor :fields
-
-    # Define a new form.
-    def self.define(identifier)
-      form = Formulan::Form.new.tap do |f|
-        f.identifier = identifier
-        f.fields = []
-        f.save
-      end
-    end
   end
 end
