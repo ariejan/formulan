@@ -6,7 +6,8 @@ module Formulan
   end
 
   def self.fetch(identifier)
-    @forms.fetch(identifier, nil)
+    identifier = identifier.to_sym if identifier.is_a?(String)
+    forms.fetch(identifier, nil)
   end
 
   # Convenience method for Formulan::FormDefinition.new

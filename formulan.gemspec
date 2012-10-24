@@ -22,11 +22,14 @@ Gem::Specification.new do |s|
   s.require_paths = %w(lib app)
 
   s.add_dependency "rails", "~> 3.2.8"
+  s.add_dependency "activemodel", "~> 3.2.8"
+  s.add_dependency "haml", "~> 3.1.7"
+  s.add_dependency "simple_form", "~> 2.0.4"
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "capybara-webkit"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "fuubar"
   s.add_development_dependency "sqlite3"
-  s.add_development_dependency "capybara-webkit"
   s.add_development_dependency "database_cleaner"
 end

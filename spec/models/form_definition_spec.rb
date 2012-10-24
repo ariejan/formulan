@@ -20,14 +20,25 @@ module Formulan
 
       its(:identifier) { expect(subject).to eq :my_form }
       its(:fields)     { expect(subject).to have(3).elements }
+
+      it "has attr_accessors" do
+        expect(subject).to respond_to(:email)
+        expect(subject).to respond_to(:email=)
+        expect(subject).to respond_to(:message)
+        expect(subject).to respond_to(:message=)
+      end
     end
   end
 
   describe "#self.fetch" do
-    subject { Formulan.define :my_form }
+    let!(:form) { Formulan.define :my_form }
 
     it "fetches the proper form" do
       expect(Formulan.fetch(:my_form).identifier).to eq(:my_form)
+    end
+
+    it "fetches the proper form when supplied a string" do
+      expect(Formulan.fetch("my_form").identifier).to eq(:my_form)
     end
 
     it "returns nil when the form is not known" do

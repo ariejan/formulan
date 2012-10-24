@@ -36,6 +36,8 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 
+  config.include Formulan::Engine.routes.url_helpers
+
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.clean_with(:truncation)
