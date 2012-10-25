@@ -21,10 +21,10 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_paths = %w(lib app)
 
-  s.add_dependency "rails", "~> 3.2.8"
-  s.add_dependency "activemodel", "~> 3.2.8"
-  s.add_dependency "haml", "~> 3.1.7"
-  s.add_dependency "simple_form", "~> 2.0.4"
+  s.add_dependency "rails", "~> 3.2"
+  s.add_dependency "activemodel", "~> 3.2"
+  s.add_dependency "haml", "~> 3.1"
+  s.add_dependency "simple_form", "~> 2.0"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "capybara-webkit"
