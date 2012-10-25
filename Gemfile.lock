@@ -2,10 +2,10 @@ PATH
   remote: .
   specs:
     formulan (0.0.1)
-      activemodel (~> 3.2.8)
-      haml (~> 3.1.7)
-      rails (~> 3.2.8)
-      simple_form (~> 2.0.4)
+      activemodel (~> 3.2)
+      haml (~> 3.1)
+      rails (~> 3.2)
+      simple_form (~> 2.0)
 
 GEM
   remote: http://rubygems.org/
