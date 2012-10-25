@@ -36,6 +36,14 @@ shared_examples_for "a formulan form", type: :integration do
         fill_contact_form
       }.to change { Formulan::Form.count }.by(1)
     end
+
+    context "storing data" do
+      before { fill_contact_form }
+      subject { Formulan::Form.last }
+
+      its(:identifier) { expect(subject).to eq('contact_form') }
+      its(:data) { expect(subject["name"]).to eq('Sir Patrick Stewart') }
+    end
   end
 
   def fill_contact_form

@@ -7,9 +7,12 @@ module Formulan
 
     # POST /formulan/:identifier
     def create
-      @form = Formulan.fetch(params[:identifier])
+      @form_def = Formulan.fetch(params[:identifier])
 
-      if Formulan::Form.create(data: params[:form_definition])
+      @form = Formulan::Form.create(data: params[:formulan_form_definition])
+      @form.identifier = @form_def.identifier
+
+      if @form.save
         redirect_to formulan_engine.formulan_thanks_path(identifier: params[:identifier])
       else
         render 'new'
