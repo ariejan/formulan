@@ -10,6 +10,8 @@ Formulan is great for contact request forms, information requests or simple ques
 
 Formulan is not yet feature complete, but stable enough to use in production.
 
+> This README is a work-in-progress and may not be entirely accurate at this time. **Some of the features described here are not yet implemented.** Feel free to send pull requests with updated documentation.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -18,19 +20,19 @@ Add this line to your application's Gemfile:
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install formulan
+    $ bundle install
 
 Then generate the migration needed for Formulan:
 
-    $ rails generate formulan:migration
+    $ rake formulan:install:migrations
 
 And migrate your database:
 
     $ rake db:migrate
+
+The final step is to mount the engine in your app in `config/routes.rb`
+
+    mount Formulan::Engine => '/formulan'
 
 ## Usage
 
@@ -48,6 +50,8 @@ Create a form in `apps/forms`. For example `app/forms/contract_form.rb`:
 
       submit label: "Send"
     end
+
+It's important that the filename ends with `_form.rb`, so Formulan can autoload your forms for you.
 
 Next, you can render this form in your views like so:
 
@@ -100,6 +104,7 @@ Sending an email with the proper data could work like this:
       after_save do |data|
         NotificationMailer.contact_form(data).deliver
       end
+    end
       
 The `before_save` can be used to manipulate data before it's stored:
 
@@ -111,6 +116,7 @@ The `before_save` can be used to manipulate data before it's stored:
         # Force 1 <= (int)rating <= 10
         data[:rating] = [10, [1, data[:rating].to_i].max].min
       end
+    end
       
 ### Exporting your data
 
@@ -120,13 +126,13 @@ For this form:
 
     Formulan.define :contact_form do
       string :email
+    end
 
 You could print a list of email addresses like this:
 
     Formulan::Model.where(identifier: :contact_form).find_each do |entry|
       puts entry[:email]
     end
-
 
 ## Contributing
 
