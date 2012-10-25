@@ -1,6 +1,6 @@
 - if @form
-  = simple_form_for @form, url: "/formulan/#{@form.identifier}" do |f|
-    = @form.fields.each do |field|
+  = simple_form_for @form, url: formulan_engine.post_formulan_path(identifier: @form.identifier) do |f|
+    - @form.fields.each do |field|
       - if field.type == :string
         = f.input field.name, label: field.label, as: :string
       - elsif field.type == :text

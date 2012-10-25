@@ -1,5 +1,5 @@
 module Formulan
-  class FormsController < ApplicationController
+  class FormsController < ::ApplicationController
     # GET /formulan/:identifier
     def new
       @form = Formulan.fetch(params[:identifier])
@@ -10,7 +10,7 @@ module Formulan
       @form = Formulan.fetch(params[:identifier])
 
       if Formulan::Form.create(data: params[:form_definition])
-        redirect_to formulan_thanks_path(identifier: params[:identifier])
+        redirect_to formulan_engine.formulan_thanks_path(identifier: params[:identifier])
       else
         render 'new'
       end
